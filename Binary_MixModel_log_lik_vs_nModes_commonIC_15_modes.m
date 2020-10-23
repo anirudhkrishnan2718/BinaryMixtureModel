@@ -5,14 +5,13 @@ clear all;
 
 %% load data from mat files
 
-input1 = load('CommonIC_9_Folds_3_EMIter_500_log_lik_vs_nModes.mat');
-input2 = load("CommonIC_9_Folds_3_EMIter_500_log_lik_vs_nModes_25_5_50.mat");
+input1 = load('CommonIC_15_Folds_3_EMIter_500_log_lik_vs_nModes_23_1_32.mat');
 
 
 %% using mean and standard deviation for plotting
-all_nModes = [input1.n_modes_values input2.n_modes_values];
-all_log_lik_raw_full = transpose([input1.avg_log_lik_overFolds; input2.avg_log_lik_overFolds]);
-% all_log_lik_raw = all_log_lik_raw_full(:, 1:3)
+all_nModes = [input1.n_modes_values];
+all_log_lik_raw_full = transpose([input1.avg_log_lik_overFolds]);
+num_nModes = numel(all_nModes);
 
 %% using median and interpolated 68th percentile for plotting
 
@@ -24,12 +23,12 @@ avg_log_lik_percentile_mu_sigma_lower = quantile(all_log_lik_raw_full, 0.5 - (0.
 
 Y_ebar_pos = avg_log_lik_percentile_mu_sigma_upper - avg_log_lik_medians;
 Y_ebar_neg = avg_log_lik_medians - avg_log_lik_percentile_mu_sigma_lower;
-X_ebar_pos = zeros(1, 10);
-X_ebar_neg = zeros(1, 10);
+X_ebar_pos = zeros(1, num_nModes);
+X_ebar_neg = zeros(1, num_nModes);
 
 %% using raw data oints for a scatter plot
 
-all_nModes_scatter = repmat(all_nModes, 9, 1);
+all_nModes_scatter = repmat(all_nModes, 15, 1);
 z1 = reshape(all_nModes_scatter, [], 1);
 all_log_lik_raw_scatter = all_log_lik_raw_full;
 z2 = reshape(all_log_lik_raw_scatter, [], 1);
