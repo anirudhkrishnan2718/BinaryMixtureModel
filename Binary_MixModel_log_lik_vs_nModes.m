@@ -36,7 +36,7 @@ test_set_3 = chunk_3;
 
 %% running EM algo to find w_alpha and m_i_alpha for all N folds separately
 
-n_modes_values = [25:1:30];
+n_modes_values = [19:1:24];
 mode_vals = numel(n_modes_values);
 avg_log_lik_overFolds = zeros(mode_vals, n_init_cond);
 
@@ -74,7 +74,7 @@ end
 %% saving output per mode per distinct IC along with list of mode values used
 
 disp('Saving results to mat fille')
-save('CommonIC_15_Folds_3_EMIter_500_log_lik_vs_nModes_23_1_32.mat', 'n_modes_values', 'avg_log_lik_overFolds')
+save('CommonIC_15_Folds_3_EMIter_500_log_lik_vs_nModes_19_1_24.mat', 'n_modes_values', 'avg_log_lik_overFolds')
 % loadedOutputs = load('CommonIC_9_Folds_3_EMIter_500_log_lik_vs_nModes.mat')
 
 
