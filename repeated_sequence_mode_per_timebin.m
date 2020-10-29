@@ -54,9 +54,13 @@ w_all = EMResults.w_dumpArray{median_IC_index, 1};
 m_all = EMResults.m_dumpArray{median_IC_index, 1};
 
 fold_index = 3;
-w_input = w_all(fold_index, :);
-m_input = m_all(:, :, fold_index);
+w_input_unsorted = w_all(fold_index, :);
+m_input_unsorted = m_all(:, :, fold_index);
 
+% sort w and m in descending order of weights
+w_m_consolidated = sortrows(transpose([w_input_unsorted; m_input_unsorted]), 1, 'descend');
+w_input = transpose(w_m_consolidated(:, 1));
+m_input = transpose(w_m_consolidated(:, 2:end));
 
 
 %% load cell arrays and calculate psth for all cells

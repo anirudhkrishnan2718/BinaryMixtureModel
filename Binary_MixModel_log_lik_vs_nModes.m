@@ -75,6 +75,7 @@ end
 
 disp('Saving results to mat fille')
 save('CommonIC_15_Folds_3_EMIter_500_log_lik_vs_nModes_19_1_24.mat', 'n_modes_values', 'avg_log_lik_overFolds')
+save('TrainTestSets_RandomPermute_MutiVal_Modes.mat', 'train_set_1', 'train_set_2', 'train_set_3', 'test_set_1', 'test_set_2', 'test_set_3')
 % loadedOutputs = load('CommonIC_9_Folds_3_EMIter_500_log_lik_vs_nModes.mat')
 
 

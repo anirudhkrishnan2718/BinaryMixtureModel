@@ -77,6 +77,7 @@ end
 %% saving output per mode per distinct IC along with list of mode values used
 
 save('CommonIC_15_Folds_3_EMIter_500_log_lik_vs_nModes_singleVal_25.mat', 'n_modes_values', 'avg_log_lik_overFolds', 'w_dumpArray', 'm_dumpArray')
+save('TrainTestSets_RandomPermute_singleVal_25.mat', 'train_set_1', 'train_set_2', 'train_set_3', 'test_set_1', 'test_set_2', 'test_set_3')
 % loadedOutputs = load('CommonIC_15_Folds_3_EMIter_500_log_lik_vs_nModes_singleVal_25.mat')
 
 
