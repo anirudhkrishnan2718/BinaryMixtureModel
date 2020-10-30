@@ -1,9 +1,9 @@
 clc
 clear all;
 
-load('HMM_test_150_cells_binarized_spikes.mat', 'HMM_150_cells_binarized_spikes')
+load('HMM_test_300_cells_binarized_spikes.mat', 'HMM_300_cells_binarized_spikes')
 % sample_in = HMM_150_cells_binarized_spikes(1:100, :);
-sample_in_unshuffled = HMM_150_cells_binarized_spikes(1:100, :);
+sample_in_unshuffled = HMM_300_cells_binarized_spikes(1:200, :);
 
 nCells = size(sample_in_unshuffled, 1);
 timeBins = size(sample_in_unshuffled, 2);
