@@ -10,7 +10,7 @@ timeBins = size(sample_in_unshuffled, 2);
 % at frame 70250 trial 1 begins
 % at frame 125902 trial 50 ends
 
-sample_in_unshuffled_secondHalf = sample_in_unshuffled(:, 70250:125902)
+sample_in_unshuffled_secondHalf = sample_in_unshuffled(:, 70250:125902);
 
 
 %% defining number of chunks and creating chunks. then assigning train and test sets
