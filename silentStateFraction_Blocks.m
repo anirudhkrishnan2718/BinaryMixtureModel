@@ -91,7 +91,7 @@ plot(silentStateFraction(3, :), 'Marker', '*', 'LineStyle', ':', 'Color', 'Black
 grid on
 box on
 % title(['Mode Index = ', num2str(x), ' and $w_{\alpha} = $', num2str(w_input(x))], 'Interpreter','latex', 'FontSize', 20)
-xlabel('Blcok index', 'Interpreter','latex', 'FontSize', 14)
+xlabel('Block index', 'Interpreter','latex', 'FontSize', 14)
 legend('Repeated stimulus block (20 seconds)', 'Interpreter','latex', 'FontSize', 12)
 
 

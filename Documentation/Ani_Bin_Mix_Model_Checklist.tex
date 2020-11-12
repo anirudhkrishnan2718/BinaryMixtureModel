@@ -1,0 +1,24 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\begin{document}
+	\title{Binary Mixture Model Data Processing Pipeline}
+	\maketitle
+	\section{Checklist after pre-processing}
+	
+	\begin{enumerate}
+		\item Look at each cell outline andd size visually to sort good and bad cells.
+		\item \textit{Mathematical method to do this sorting?} : Plot heatmap of cell fluorescence as a function of repeated stimulus trial along with PSTH. 
+		\item Sort and label cells by mutual information ranking and separately by average activity ranking
+		\item Perform spike sorting and plot similar heatmap as above for all cells
+		\item Binarize spike trains to end up with logical array of size N cells by T timebins.
+		\item \textit{Measures of Stationarity} : Look at what fraction of all timebins in each stimulus block are the silent state. Plot this fraction vs block number
+		\item Plot average activity in each block averaged across all cells 
+	
+	\end{enumerate}
+	
+\end{document}

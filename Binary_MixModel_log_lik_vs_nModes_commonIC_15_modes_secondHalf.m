@@ -7,8 +7,8 @@ sample_in_unshuffled = HMM_300_cells_binarized_spikes(1:200, :);
 nCells = size(sample_in_unshuffled, 1);
 timeBins = size(sample_in_unshuffled, 2);
 
-% at frame 70250 trial 1 begins
-% at frame 125902 trial 50 ends
+% at frame 70250 trial 51 begins
+% at frame 125902 trial 90 ends
 
 sample_in_unshuffled_secondHalf = sample_in_unshuffled(:, 70250:125902);
 
